@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "products": "Products",
+    "customers": "Customers", 
+    "machinery": "Machinery",
+    "contact": "Contact",
+    "certificates": "Certificates"
+  },
+  "hero": {
+    "welcome": "Welcome to IPP EGYPT",
+    "title": "We Find Highest Use for All Resources",
+    "subtitle": "int. Printing & Packaging Materials Co.",
+    "aboutBtn": "About Us",
+    "contactBtn": "Contact Us",
+    "scrollDown": "Scroll Down"
+  },
+  "about": {
+    "subtitle": "Some words about us",
+    "title": "Since the inception of the company",
+    "description": "Seeing the continuous development, which led the wing to gain a long-standing and distinguished reputation for IPP EGYPT",
+    "videoTitle": "IPP EGYPT - Company Overview",
+    "calipoTitle": "The Calibo Production Line",
+    "calipoDescription": "The International Company for Printing and Packaging Materials is unique in its Calibo production line, the first in Egypt serving the ice cream sector, with the Calibo shaping machine",
+    "imageAlt": {
+      "machine1": "CALIPO Machine 1 - Horizontal packaging system",
+      "machine2": "CALIPO Machine 2 - Vertical packaging unit", 
+      "machine3": "CALIPO Machine 3 - Advanced sealing technology",
+      "machine4": "CALIPO Machine 4 - Multi-lane packaging solution",
+      "machine5": "CALIPO Machine 5 - High-speed production line",
+      "machine6": "CALIPO Machine 6 - Quality control system"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "iceCream": "Ice cream cone sleeves",
+    "lamination": "Lamination",
+    "laminationDesc": "Dry Lamination, Wet Lamination, Poly Ethylene Extrusion.",
+    "peFilm": "PE Blown Film",
+    "peFilmDesc": "25 : 120 micron PE film for Lamination.",
+    "bagMaking": "Bag/Pouch Making",
+    "bagMakingDesc": "Center Seal Pouches, 4 Sides Seal Pouches and Gusseted pouches.",
+    "printing": "Printing",
+    "printingDesc": "Rotogravure up to 10 colors, Reverse printing up to 2 colors Reverse matt varnishing Cild seal.",
+    "pvcSleeves": "PVC Shrink sleeves",
+    "stretchFilm": "Stretch Film",
+    "stretchFilmDesc": "Automatic and manual for wrapping products and balettes.",
+    "peExtrusion": "PE Extrusion",
+    "peExtrusionDesc": "Laminate/coat films, paper, alufoil, with PE film 10:50 microns."
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "What we are proud of",
+    "categories": {
+      "biscuits": "BISCUITS AND SWEETS",
+      "chips": "CHIPS AND SNACKS", 
+      "coffee": "COFFEE AND TEA",
+      "detergents": "DETERGENTS",
+      "dryFood": "DRY FOOD",
+      "frozen": "FROZEN",
+      "ketchup": "KETCHUP AND TOMATO PASTE",
+      "pharma": "PHARMACEUTICAL AND COSMETICS",
+      "tobacco": "TOBACCO",
+      "wipes": "WIPES"
+    }
+  },
+  "customers": {
+    "title": "Success Partners",
+    "subtitle": "Those who trust us"
+  },
+  "certificates": {
+    "title": "Our Certificates",
+    "description": "We are proud of our quality certifications that demonstrate our commitment to excellence and international standards in packaging and printing.",
+    "view": "View Certificate"
+  },
+  "machinery": {
+    "title": "Production Lines",
+    "description": "IPP Egypt's production lines utilize advanced technology to ensure high efficiency, quality, and sustainable manufacturing processes.",
+    "view": "View Details"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "phone": "Phone",
+    "email": "Email", 
+    "address": "Address",
+    "getInTouch": "Get In Touch",
+    "sendMessage": "Send Message"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "company": "IPP EGYPT - int. Printing & Packaging Materials Co."
+  }
+}
