@@ -101,3 +101,7 @@ temp/
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+
+# Ignore all markdown files except README.md
+*.md
+!README.md
