@@ -166,7 +166,7 @@ const Footer: React.FC = () => {
                 // className="h-16 w-auto mb-4 filter brightness-0 invert"
               />
               <h3 className="text-xl font-bold mb-3">
-                {isRTL ? 'شركة المواد الدولية للطباعة والتغليف' : 'IPP EGYPT'}
+                {isRTL ? 'الشركة العالمية للطباعة ومواد التعبئة والتغليف' : 'IPP EGYPT'}
               </h3>
               <p className="text-gray-300 leading-relaxed">
                 {isRTL 

@@ -72,7 +72,7 @@ const Machinery: React.FC = () => {
       // title: 'SUPER COMBI 5000 Lining Machine',
       // titleAr: 'ماكينة التبطين SUPER COMBI 5000',
       description: 'SUPER COMBI 5000 Lining Machine',
-      descriptionAr: 'ماكينة التبطين SUPER COMBI 5000'
+      descriptionAr: 'ماكينة التبطين'
     },
     {
       id: 'machine8',
@@ -120,7 +120,7 @@ const Machinery: React.FC = () => {
       // title: 'COMBI -1200 Lining Machine',
       // titleAr: 'ماكينة التبطين COMBI -1200',
       description: 'COMBI -1200 Lining Machine',
-      descriptionAr: 'ماكينة التبطين COMBI -1200'
+      descriptionAr: 'ماكينة التبطين'
     },
     {
       id: 'machine14',

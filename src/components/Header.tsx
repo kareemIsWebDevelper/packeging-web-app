@@ -17,8 +17,8 @@ const Header: React.FC = () => {
     { key: 'products', href: '#products' },
     { key: 'customers', href: '#customers' },
     { key: 'machinery', href: '#machinery' },
-    { key: 'contact', href: '#contact' },
     { key: 'certificates', href: '#certificates' },
+    { key: 'contact', href: '#contact' },
   ], []);
 
   // Effect to handle scroll detection and update active section

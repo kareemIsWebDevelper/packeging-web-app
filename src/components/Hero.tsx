@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
           >
             <span className="block">{t('hero.title').split('for')[0]}</span>
-            <span className="gradient-text">for All Resources</span>
+            {/* <span className="gradient-text">for All Resources</span> */}
           </motion.h1>
 
           {/* Subtitle */}
