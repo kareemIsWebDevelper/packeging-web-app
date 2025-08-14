@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDirection } from '../hooks/useDirection';
 import { Bars3Icon, XMarkIcon, LanguageIcon } from '@heroicons/react/24/outline';
@@ -8,8 +8,9 @@ const Header: React.FC = () => {
   const { t } = useTranslation();
   const { isRTL, toggleLanguage } = useDirection();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
-  const navigationItems = [
+  const navigationItems = useMemo(() => [
     { key: 'home', href: '#home' },
     { key: 'about', href: '#about' },
     { key: 'services', href: '#services' },
@@ -18,7 +19,32 @@ const Header: React.FC = () => {
     { key: 'machinery', href: '#machinery' },
     { key: 'contact', href: '#contact' },
     { key: 'certificates', href: '#certificates' },
-  ];
+  ], []);
+
+  // Effect to handle scroll detection and update active section
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navigationItems.map(item => item.key);
+      const scrollPosition = window.scrollY + 100; // Offset for header height
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+
+    // Set initial active section
+    handleScroll();
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [navigationItems]);
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -74,10 +100,20 @@ const Header: React.FC = () => {
               <button
                 key={item.key}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors relative group"
+                className={`font-medium transition-colors relative group ${
+                  activeSection === item.key
+                    ? 'text-primary-600'
+                    : 'text-gray-700 hover:text-primary-600'
+                }`}
               >
                 {t(`nav.${item.key}`)}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300 group-hover:w-full"></span>
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 bg-primary-600 transition-all duration-300 ${
+                    activeSection === item.key
+                      ? 'w-full'
+                      : 'w-0 group-hover:w-full'
+                  }`}
+                ></span>
               </button>
             ))}
           </nav>
@@ -112,7 +148,11 @@ const Header: React.FC = () => {
               <button
                 key={item.key}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-primary-600 rounded-md transition-colors"
+                className={`block w-full text-left px-4 py-3 rounded-md transition-colors ${
+                  activeSection === item.key
+                    ? 'bg-primary-50 text-primary-600 border-l-4 border-primary-600'
+                    : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'
+                }`}
               >
                 {t(`nav.${item.key}`)}
               </button>
