@@ -34,9 +34,43 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(e.target as HTMLFormElement);
+    const name = formData.get('firstName') as string;
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+    const message = formData.get('message') as string;
+    
+    // Create email content
+    const subject = encodeURIComponent(`Contact Form Submission from ${name}`);
+    const body = encodeURIComponent(`
+      Hello,
+
+      This is a contact form submission from your website:
+
+      Name: ${name}
+      Email: ${email}
+      Phone: ${phone || 'Not provided'}
+
+      Message:
+      ${message || 'No message provided'}
+
+      Best regards,
+      ${name}
+    `.trim());
+    
+    // Create Gmail compose URL
+    const gmailUrl = `https://mail.google.com/mail/u/0/?view=cm&to=Sales@ipp-egypt.com&su=${subject}&body=${body}`;
+    
+    // Show success state briefly then redirect
     setFormSubmitted(true);
-    // Here you would normally handle form submission
-    setTimeout(() => setFormSubmitted(false), 3000);
+    
+    // Open Gmail in new tab after brief delay
+    setTimeout(() => {
+      window.open(gmailUrl, '_blank');
+      setFormSubmitted(false);
+    }, 1000);
   };
 
   return (
