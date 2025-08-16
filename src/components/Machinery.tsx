@@ -58,14 +58,14 @@ const Machinery: React.FC = () => {
       description: 'Bimk scissors',
       descriptionAr: 'مقصات بيمك'
     },
-    {
-      id: 'machine6',
-      src: require('../assets/images/machinery6.jpeg'),
-      // title: 'Bimk scissors',
-      // titleAr: 'مقصات بيمك',
-      description: 'Bimk scissors',
-      descriptionAr: 'مقصات بيمك'
-    },
+    // {
+    //   id: 'machine6',
+    //   src: require('../assets/images/machinery6.jpeg'),
+    //   // title: 'Bimk scissors',
+    //   // titleAr: 'مقصات بيمك',
+    //   description: 'Bimk scissors',
+    //   descriptionAr: 'مقصات بيمك'
+    // },
     {
       id: 'machine7',
       src: require('../assets/images/machinery7.jpeg'),
