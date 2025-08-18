@@ -27,12 +27,12 @@ export const images = {
     machine6: 'https://raptor.gamezawy.com/ipp/wp-content/uploads/2025/07/ماكينة-كاليبو-6CALIPPO-1-scaled.jpg',
   },
 
-  // Company certificates
+  // Company certificates (PDFs)
   certificates: {
-    brc: 'https://raptor.gamezawy.com/ipp/wp-content/uploads/2025/06/BRC_Certificate_page-0001-Custom.jpg',
-    iso1: 'https://raptor.gamezawy.com/ipp/wp-content/uploads/2025/06/CERTIFICATE_ISO1_page-0001-Custom.jpg',
-    iso2: 'https://raptor.gamezawy.com/ipp/wp-content/uploads/2025/06/CERTIFICATE_ISO2_page-0001-Custom.jpg',
-    iso3: 'https://raptor.gamezawy.com/ipp/wp-content/uploads/2025/06/CERTIFICATE_ISO3_page-0001-Custom.jpg',
+    fssc22000: '/assets/docs/fssc22000.pdf',
+    iso14001: '/assets/docs/iso14001.pdf',
+    iso45001: '/assets/docs/iso45001.pdf',
+    iso9001: '/assets/docs/iso9001.pdf',
   },
 
   // Success Partners logos

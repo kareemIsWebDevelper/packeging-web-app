@@ -9,6 +9,7 @@ interface CertificateItem {
   src: string;
   title: string;
   titleAr: string;
+  isPdf?: boolean;
 }
 
 const Certificates: React.FC = () => {
@@ -18,33 +19,43 @@ const Certificates: React.FC = () => {
 
   const certificates: CertificateItem[] = [
     {
-      id: 'brc',
-      src: images.certificates.brc,
-      title: 'BRC Global Standard',
-      titleAr: 'شهادة BRC العالمية'
+      id: 'fssc22000',
+      src: images.certificates.fssc22000,
+      title: 'FSSC 22000 Certificate',
+      titleAr: 'شهادة FSSC 22000',
+      isPdf: true
     },
     {
-      id: 'iso1',
-      src: images.certificates.iso1,
-      title: 'ISO Certificate 1',
-      titleAr: 'شهادة ISO 1'
+      id: 'iso14001',
+      src: images.certificates.iso14001,
+      title: 'ISO 14001 Certificate',
+      titleAr: 'شهادة ISO 14001',
+      isPdf: true
     },
     {
-      id: 'iso2',
-      src: images.certificates.iso2,
-      title: 'ISO Certificate 2',
-      titleAr: 'شهادة ISO 2'
+      id: 'iso45001',
+      src: images.certificates.iso45001,
+      title: 'ISO 45001 Certificate',
+      titleAr: 'شهادة ISO 45001',
+      isPdf: true
     },
     {
-      id: 'iso3',
-      src: images.certificates.iso3,
-      title: 'ISO Certificate 3',
-      titleAr: 'شهادة ISO 3'
+      id: 'iso9001',
+      src: images.certificates.iso9001,
+      title: 'ISO 9001 Certificate',
+      titleAr: 'شهادة ISO 9001',
+      isPdf: true
     }
   ];
 
-  const openLightbox = (certificate: CertificateItem) => {
-    setSelectedCertificate(certificate);
+  const openCertificate = (certificate: CertificateItem) => {
+    if (certificate.isPdf) {
+      // Open PDF in new tab
+      window.open(certificate.src, '_blank');
+    } else {
+      // Open image in lightbox
+      setSelectedCertificate(certificate);
+    }
   };
 
   const closeLightbox = () => {
@@ -79,21 +90,41 @@ const Certificates: React.FC = () => {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
               className="group cursor-pointer"
-              onClick={() => openLightbox(certificate)}
+              onClick={() => openCertificate(certificate)}
             >
               <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 group-hover:shadow-2xl">
                 <div className="relative overflow-hidden">
-                  <img
-                    src={certificate.src}
-                    alt={isRTL ? certificate.titleAr : certificate.title}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                    <div className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {t('certificates.view')}
+                  {certificate.isPdf ? (
+                    <div className="w-full h-64 bg-gradient-to-br from-red-50 to-red-100 flex flex-col items-center justify-center">
+                      <svg 
+                        className="w-16 h-16 text-red-600 mb-4 transition-transform duration-300 group-hover:scale-110" 
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-red-600 font-semibold text-lg">PDF</span>
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
+                        <div className="text-red-600 text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {t('certificates.view')}
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  ) : (
+                    <>
+                      <img
+                        src={certificate.src}
+                        alt={isRTL ? certificate.titleAr : certificate.title}
+                        className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <div className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          {t('certificates.view')}
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-800 text-center">
@@ -105,9 +136,9 @@ const Certificates: React.FC = () => {
           ))}
         </div>
 
-        {/* Lightbox Modal */}
+        {/* Lightbox Modal - Only for non-PDF certificates */}
         <AnimatePresence>
-          {selectedCertificate && (
+          {selectedCertificate && !selectedCertificate.isPdf && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

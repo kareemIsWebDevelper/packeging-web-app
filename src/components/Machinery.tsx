@@ -31,16 +31,16 @@ const Machinery: React.FC = () => {
       src: require('../assets/images/machinery2.jpeg'),
       // title: 'Paper machine1',
       // titleAr: 'ماكينة  القرطاس',
-      description: 'Paper machine1',
-      descriptionAr: 'ماكينة  القرطاس'
+      description: 'Ice Cono machine I',
+      descriptionAr: '1 ماكينة  القرطاس'
     },
     {
       id: 'machine3',
       src: require('../assets/images/machinery3.jpeg'),
       // title: 'Paper machine2',
       // titleAr: 'ماكينة القرطاس',
-      description: 'Paper machine2',
-      descriptionAr: 'ماكينة القرطاس'
+      description: 'Ice Cono machine II',
+      descriptionAr: '2 ماكينة القرطاس'
     },
     {
       id: 'machine4',
