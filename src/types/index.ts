@@ -1,8 +1,9 @@
 export interface Service {
-  id: string;
   icon: string;
   title: string;
-  description?: string;
+  titleAr: string;
+  description: string;
+  descriptionAr?: string;
 }
 
 export interface Product {
@@ -28,6 +29,13 @@ export interface MachineryImage {
   id: string;
   url: string;
   alt: string;
+}
+
+export interface MachineryItem {
+  id: string;
+  src: string;
+  description: string;
+  descriptionAr: string;
 }
 
 export interface Language {

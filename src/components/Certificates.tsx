@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { XMarkIcon } from '@heroicons/react/24/outline';
-import { images } from '../assets/images';
+import { images } from '../data/images';
 
 interface CertificateItem {
   id: string;

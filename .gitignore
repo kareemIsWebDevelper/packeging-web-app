@@ -105,3 +105,6 @@ temp/
 # Ignore all markdown files except README.md
 *.md
 !README.md
+
+# Shell scripts
+*.sh

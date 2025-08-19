@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { images } from '../assets/images';
+import { images } from '../data/images';
 
 const Products: React.FC = () => {
   const { t, i18n } = useTranslation();

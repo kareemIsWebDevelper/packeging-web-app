@@ -1,114 +1,152 @@
-import { Product, ProductCategory, Service, Customer } from '../types';
+import { Service, MachineryItem } from "../types";
 
 // Services data
 export const services: Service[] = [
   {
-    id: 'ice-cream',
-    icon: '🍦',
-    title: 'Ice cream cone sleeves',
-    description: 'Specialized packaging for ice cream cones'
+    icon: "/assets/images/services/service1.png",
+    title: "Ice cream cone sleeves",
+    titleAr: "أكمام مخروط الآيس كريم",
+    description: "",
   },
   {
-    id: 'lamination',
-    icon: '🔄',
-    title: 'Lamination',
-    description: 'Dry Lamination, Wet Lamination, Poly Ethylene Extrusion'
+    icon: "/assets/images/services/service2.png",
+    title: "Lamination",
+    titleAr: "التصفيح",
+    description: "Dry Lamination, Wet Lamination, Poly Ethylene Extrusion.",
+    descriptionAr: "التصفيح الجاف، التصفيح الرطب، بثق البولي إيثيلين.",
   },
   {
-    id: 'pe-film',
-    icon: '📦',
-    title: 'PE Blown Film',
-    description: '25 : 120 micron PE film for Lamination'
+    icon: "/assets/images/services/service3.png",
+    title: "PE Blown Film",
+    titleAr: "فيلم البولي إيثيلين المنفوخ",
+    description: "25 : 120 micron PE film for Lamination.",
+    descriptionAr: "فيلم البولي إيثيلين 25: 120 ميكرون للتصفيح.",
   },
   {
-    id: 'bag-making',
-    icon: '👜',
-    title: 'Bag/Pouch Making',
-    description: 'Center Seal Pouches, 4 Sides Seal Pouches and Gusseted pouches'
+    icon: "/assets/images/services/service4.png",
+    title: "Bag/Pouch Making",
+    titleAr: "صنع الأكياس/الأكياس",
+    description:
+      "Center Seal Pouches, 4 Sides Seal Pouches and Gusseted pouches.",
+    descriptionAr:
+      "أكياس الختم المركزي، أكياس الختم ذات 4 جوانب والأكياس المطوية.",
   },
   {
-    id: 'printing',
-    icon: '🖨️',
-    title: 'Printing',
-    description: 'Rotogravure up to 10 colors, Reverse printing up to 2 colors'
+    icon: "/assets/images/services/service5.png",
+    title: "Printing",
+    titleAr: "الطباعة",
+    description:
+      "Rotogravure up to 10 colors, Reverse printing up to 2 colors Reverse matt varnishing Cild seal.",
+    descriptionAr:
+      "الطباعة الحفرية حتى 10 ألوان، الطباعة العكسية حتى لونين، التلميع المطفي العكسي، الختم البارد.",
   },
   {
-    id: 'pvc-sleeves',
-    icon: '📄',
-    title: 'PVC Shrink sleeves',
-    description: 'High-quality shrink sleeve packaging'
+    icon: "/assets/images/services/service6.png",
+    title: "PVC Shrik sleeves",
+    titleAr: "أكمام PVC المنكمشة",
+    description: "",
   },
   {
-    id: 'stretch-film',
-    icon: '🔗',
-    title: 'Stretch Film',
-    description: 'Automatic and manual for wrapping products and palettes'
+    icon: "/assets/images/services/service7.png",
+    title: "Stretch Film",
+    titleAr: "فيلم التمدد",
+    description: "Automatic and manual for wrapping products and balettes.",
+    descriptionAr: "أوتوماتيكي ويدوي لتغليف المنتجات والمنصات.",
   },
   {
-    id: 'pe-extrusion',
-    icon: '⚙️',
-    title: 'PE Extrusion',
-    description: 'Laminate/coat films, paper, alufoil, with PE film 10:50 microns'
-  }
+    icon: "/assets/images/services/service8.png",
+    title: "PE Extrusion",
+    titleAr: "بثق البولي إيثيلين",
+    description:
+      "Laminate/coat films, paper, alufoil, with PE film 10:50 microns.",
+    descriptionAr:
+      "تصفيح/طلاء الأفلام، الورق، رقائق الألومنيوم، بفيلم البولي إيثيلين 10:50 ميكرون.",
+  },
 ];
 
-// Product categories
-export const productCategories: ProductCategory[] = [
+export const machineryItems: MachineryItem[] = [
   {
-    id: 'biscuits',
-    name: 'Biscuits and Sweets',
-    products: [
-      { id: 'b1', name: 'Biscuit Package 1', image: '/images/biscuits001.png', category: 'biscuits' },
-      { id: 'b2', name: 'Biscuit Package 2', image: '/images/biscuits002.png', category: 'biscuits' },
-      { id: 'b3', name: 'Biscuit Package 3', image: '/images/biscuits003.png', category: 'biscuits' },
-      { id: 'b4', name: 'Biscuit Package 4', image: '/images/biscuits004.png', category: 'biscuits' }
-    ]
+    id: "machine1",
+    src: "/assets/images/machinery/machinery1.jpeg",
+    description: "Bag Cutting Machine",
+    descriptionAr: "ماكينة تفصيل اكياس",
   },
   {
-    id: 'chips',
-    name: 'Chips and Snacks',
-    products: [
-      { id: 'c1', name: 'Chips Package 1', image: '/images/chips001.png', category: 'chips' },
-      { id: 'c2', name: 'Chips Package 2', image: '/images/chips002.png', category: 'chips' },
-      { id: 'c3', name: 'Chips Package 3', image: '/images/chips003.png', category: 'chips' },
-      { id: 'c4', name: 'Chips Package 4', image: '/images/chips004.png', category: 'chips' },
-      { id: 'c5', name: 'Chips Package 5', image: '/images/chips005.png', category: 'chips' },
-      { id: 'c6', name: 'Chips Package 6', image: '/images/chips006.png', category: 'chips' }
-    ]
-  }
-  // Add more categories as needed
+    id: "machine2",
+    src: "/assets/images/machinery/machinery2.jpeg",
+    description: "Ice Cono machine I",
+    descriptionAr: "1 ماكينة  القرطاس",
+  },
+  {
+    id: "machine3",
+    src: "/assets/images/machinery/machinery3.jpeg",
+    description: "Ice Cono machine II",
+    descriptionAr: "2 ماكينة القرطاس",
+  },
+  {
+    id: "machine4",
+    src: "/assets/images/machinery/machinery4.jpeg",
+    description: "Bimk scissors",
+    descriptionAr: "مقص بيمك",
+  },
+  {
+    id: "machine5",
+    src: "/assets/images/machinery/machinery5.jpeg",
+    description: "Bimk scissors",
+    descriptionAr: "مقصات بيمك",
+  },
+  {
+    id: "machine7",
+    src: "/assets/images/machinery/machinery7.jpeg",
+    description: "SUPER COMBI 5000 Lining Machine",
+    descriptionAr: "ماكينة التبطين",
+  },
+  {
+    id: "machine8",
+    src: "/assets/images/machinery/machinery8.jpeg",
+    description: "Schiavi Printing Machine",
+    descriptionAr: "ماكينة الطباعة سكيافى",
+  },
+  {
+    id: "machine9",
+    src: "/assets/images/machinery/machinery9.jpeg",
+    description: "Extrusion Machine",
+    descriptionAr: "ماكينةالاكستروجن",
+  },
+  {
+    id: "machine10",
+    src: "/assets/images/machinery/machinery10.jpeg",
+    description: "Punch Machine",
+    descriptionAr: "ماكينة البانش",
+  },
+  {
+    id: "machine11",
+    src: "/assets/images/machinery/machinery11.jpeg",
+    description: "FKI Polyethylene Machine",
+    descriptionAr: "ماكينة البولي ايثلين FKI",
+  },
+  {
+    id: "machine12",
+    src: "/assets/images/machinery/machinery12.jpeg",
+    description: "KS Polyethylene Machine",
+    descriptionAr: "ماكينة البولي ايثلين KS",
+  },
+  {
+    id: "machine13",
+    src: "/assets/images/machinery/machinery13.jpeg",
+    description: "COMBI -1200 Lining Machine",
+    descriptionAr: "ماكينة التبطين",
+  },
+  {
+    id: "machine14",
+    src: "/assets/images/machinery/machinery14.jpeg",
+    description: "Dick Wang Polyethylene Lining Machine",
+    descriptionAr: "ماكينة التبطين ديك وانج تبطين بالبولي ايثلين",
+  },
+  {
+    id: "machine15",
+    src: "/assets/images/machinery/machinery15.jpeg",
+    description: "BOBST 10-color printing machine",
+    descriptionAr: "ماكينة الطباعة BOBST 10 لون",
+  },
 ];
-
-// Customer logos
-export const customers: Customer[] = [
-  { id: '1', name: 'Customer 1', logo: '/images/customers/customer1.jpg' },
-  { id: '2', name: 'Customer 2', logo: '/images/customers/customer2.jpg' },
-  { id: '3', name: 'Customer 3', logo: '/images/customers/customer3.jpg' },
-  { id: '4', name: 'Customer 4', logo: '/images/customers/customer4.jpg' },
-  { id: '5', name: 'Customer 5', logo: '/images/customers/customer5.jpg' },
-  { id: '6', name: 'Customer 6', logo: '/images/customers/customer6.jpg' }
-];
-
-// Contact information
-export const contactInfo = {
-  phone: '0554413164 / 165 / 166',
-  email: 'info@ippegypt.com',
-  address: 'Egypt',
-  website: 'https://ippegypt.com'
-};
-
-// Company information
-export const companyInfo = {
-  name: 'IPP EGYPT',
-  fullName: 'int. Printing & Packaging Materials Co.',
-  slogan: 'We Find Highest Use for All Resources',
-  description: 'The International Company for Printing and Packaging Materials is unique in its Calibo production line, the first in Egypt serving the ice cream sector.',
-  founded: '1985',
-  specialties: [
-    'Packaging Materials',
-    'Printing Services',
-    'Lamination',
-    'PE Films',
-    'Custom Solutions'
-  ]
-};

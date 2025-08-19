@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { XMarkIcon } from '@heroicons/react/24/outline';
+import { machineryItems } from '../data';
 
 interface MachineryItem {
   id: string;
   src: string;
-  // title: string;
-  // titleAr: string;
   description: string;
   descriptionAr: string;
 }
@@ -16,129 +15,6 @@ const Machinery: React.FC = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === 'ar';
   const [selectedMachine, setSelectedMachine] = useState<MachineryItem | null>(null);
-
-  const machineryItems: MachineryItem[] = [
-    {
-      id: 'machine1',
-      src: require('../assets/images/machinery1.jpeg'),
-      // title: 'Bag Cutting Machine',
-      // titleAr: 'ماكينة تفصيل اكياس',
-      description: 'Bag Cutting Machine',
-      descriptionAr: 'ماكينة تفصيل اكياس'
-    },
-    {
-      id: 'machine2',
-      src: require('../assets/images/machinery2.jpeg'),
-      // title: 'Paper machine1',
-      // titleAr: 'ماكينة  القرطاس',
-      description: 'Ice Cono machine I',
-      descriptionAr: '1 ماكينة  القرطاس'
-    },
-    {
-      id: 'machine3',
-      src: require('../assets/images/machinery3.jpeg'),
-      // title: 'Paper machine2',
-      // titleAr: 'ماكينة القرطاس',
-      description: 'Ice Cono machine II',
-      descriptionAr: '2 ماكينة القرطاس'
-    },
-    {
-      id: 'machine4',
-      src: require('../assets/images/machinery4.jpeg'),
-      // title: 'Bimk scissors',
-      // titleAr: 'مقص بيمك',
-      description: 'Bimk scissors',
-      descriptionAr: 'مقص بيمك'
-    },
-    {
-      id: 'machine5',
-      src: require('../assets/images/machinery5.jpeg'),
-      // title: 'Bimk scissors',
-      // titleAr: 'مقصات بيمك',
-      description: 'Bimk scissors',
-      descriptionAr: 'مقصات بيمك'
-    },
-    // {
-    //   id: 'machine6',
-    //   src: require('../assets/images/machinery6.jpeg'),
-    //   // title: 'Bimk scissors',
-    //   // titleAr: 'مقصات بيمك',
-    //   description: 'Bimk scissors',
-    //   descriptionAr: 'مقصات بيمك'
-    // },
-    {
-      id: 'machine7',
-      src: require('../assets/images/machinery7.jpeg'),
-      // title: 'SUPER COMBI 5000 Lining Machine',
-      // titleAr: 'ماكينة التبطين SUPER COMBI 5000',
-      description: 'SUPER COMBI 5000 Lining Machine',
-      descriptionAr: 'ماكينة التبطين'
-    },
-    {
-      id: 'machine8',
-      src: require('../assets/images/machinery8.jpeg'),
-      // title: 'Schiavi Printing Machine',
-      // titleAr: 'ماكينة الطباعة سكيافى',
-      description: 'Schiavi Printing Machine',
-      descriptionAr: 'ماكينة الطباعة سكيافى'
-    },
-    {
-      id: 'machine9',
-      src: require('../assets/images/machinery9.jpeg'),
-      // title: 'Extrusion Machine',
-      // titleAr: 'ماكينةالاكستروجن',
-      description: 'Extrusion Machine',
-      descriptionAr: 'ماكينةالاكستروجن'
-    },
-    {
-      id: 'machine10',
-      src: require('../assets/images/machinery10.jpeg'),
-      // title: 'Punch Machine',
-      // titleAr: 'ماكينة البانش',
-      description: 'Punch Machine',
-      descriptionAr: 'ماكينة البانش'
-    },
-    {
-      id: 'machine11',
-      src: require('../assets/images/machinery11.jpeg'),
-      // title: 'FKI Polyethylene Machine',
-      // titleAr: 'ماكينة البولي ايثلين FKI',
-      description: 'FKI Polyethylene Machine',
-      descriptionAr: 'ماكينة البولي ايثلين FKI'
-    },
-    {
-      id: 'machine12',
-      src: require('../assets/images/machinery12.jpeg'),
-      // title: 'KS Polyethylene Machine',
-      // titleAr: 'ماكينة البولي ايثلين KS',
-      description: 'KS Polyethylene Machine',
-      descriptionAr: 'ماكينة البولي ايثلين KS'
-    },
-    {
-      id: 'machine13',
-      src: require('../assets/images/machinery13.jpeg'),
-      // title: 'COMBI -1200 Lining Machine',
-      // titleAr: 'ماكينة التبطين COMBI -1200',
-      description: 'COMBI -1200 Lining Machine',
-      descriptionAr: 'ماكينة التبطين'
-    },
-    {
-      id: 'machine14',
-      src: require('../assets/images/machinery14.jpeg'),
-      // title: 'Dick Wang Polyethylene Lining Machine',
-      // titleAr: 'ماكينة التبطين ديك وانج تبطين بالبولي ايثلين',
-      description: 'Dick Wang Polyethylene Lining Machine',
-      descriptionAr: 'ماكينة التبطين ديك وانج تبطين بالبولي ايثلين'
-    },
-    {
-      id: 'machine15',
-      src: require('../assets/images/machinery15.jpeg'),
-      // title: 'BOBST 10-color printing machine',
-      // titleAr: 'ماكينة الطباعة BOBST 10 لون',
-      description: 'BOBST 10-color printing machine',
-      descriptionAr: 'ماكينة الطباعة BOBST 10 لون'
-    }
-  ];
 
   const openLightbox = (machine: MachineryItem) => {
     setSelectedMachine(machine);
@@ -194,9 +70,6 @@ const Machinery: React.FC = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  {/* <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                    {isRTL ? machine.titleAr : machine.title}
-                  </h3> */}
                   <p className="text-gray-600 text-sm leading-relaxed">
                     {isRTL ? machine.descriptionAr : machine.description}
                   </p>
@@ -238,9 +111,6 @@ const Machinery: React.FC = () => {
                     />
                   </div>
                   <div className="md:w-1/3 p-6">
-                    {/* <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                      {isRTL ? selectedMachine.titleAr : selectedMachine.title}
-                    </h3> */}
                     <p className="text-gray-600 leading-relaxed">
                       {isRTL ? selectedMachine.descriptionAr : selectedMachine.description}
                     </p>

@@ -8,7 +8,7 @@ import {
   GlobeAltIcon,
   ChevronUpIcon
 } from '@heroicons/react/24/outline';
-import { images } from '../assets/images';
+import { images } from '../data/images';
 
 const Footer: React.FC = () => {
   const { t, i18n } = useTranslation();

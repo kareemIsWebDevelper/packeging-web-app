@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { images } from '../assets/images';
+import { images } from '../data/images';
 
 interface PartnerLogo {
   id: string;

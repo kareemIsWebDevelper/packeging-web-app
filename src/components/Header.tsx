@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDirection } from '../hooks/useDirection';
 import { Bars3Icon, XMarkIcon, LanguageIcon } from '@heroicons/react/24/outline';
-import { images } from '../assets/images';
+import { images } from '../data/images';
 
 const Header: React.FC = () => {
   const { t } = useTranslation();

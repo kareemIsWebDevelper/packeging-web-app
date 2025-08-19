@@ -1,0 +1,33 @@
+{
+  "short_name": "IPP مصر",
+  "name": "IPP مصر - شركة المواد الدولية للطباعة والتغليف",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/ar/home",
+  "scope": "/ar/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0ea5e9",
+  "background_color": "#ffffff",
+  "description": "IPP مصر - مزود رائد لحلول التغليف في مصر. نحن نجد أعلى استخدام لجميع الموارد.",
+  "lang": "ar",
+  "dir": "rtl"
+}

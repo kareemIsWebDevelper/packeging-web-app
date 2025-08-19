@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { images } from '../assets/images';
+import { images } from '../data/images';
 
 const Hero: React.FC = () => {
   const { t } = useTranslation();

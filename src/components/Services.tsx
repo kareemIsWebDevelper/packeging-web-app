@@ -1,84 +1,20 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-
-interface Service {
-  icon: string;
-  title: string;
-  titleAr: string;
-  description: string;
-  descriptionAr?: string;
-}
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { services } from "../data";
 
 const Services: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const isRTL = i18n.language === 'ar';
-
-  const services: Service[] = [
-    {
-      icon: 'https://raptor.gamezawy.com/ipp/wp-content/uploads/2025/06/ice-cream-80x80.png',
-      title: 'Ice cream cone sleeves',
-      titleAr: 'أكمام مخروط الآيس كريم',
-      description: ''
-    },
-    {
-      icon: 'https://raptor.gamezawy.com/ipp/wp-content/uploads/2025/06/window-80x80.png',
-      title: 'Lamination',
-      titleAr: 'التصفيح',
-      description: 'Dry Lamination, Wet Lamination, Poly Ethylene Extrusion.',
-      descriptionAr: 'التصفيح الجاف، التصفيح الرطب، بثق البولي إيثيلين.'
-    },
-    {
-      icon: 'https://raptor.gamezawy.com/ipp/wp-content/uploads/2025/06/plastic-wrap-80x80.png',
-      title: 'PE Blown Film',
-      titleAr: 'فيلم البولي إيثيلين المنفوخ',
-      description: '25 : 120 micron PE film for Lamination.',
-      descriptionAr: 'فيلم البولي إيثيلين 25: 120 ميكرون للتصفيح.'
-    },
-    {
-      icon: 'https://raptor.gamezawy.com/ipp/wp-content/uploads/2025/06/pouch-80x80.png',
-      title: 'Bag/Pouch Making',
-      titleAr: 'صنع الأكياس/الأكياس',
-      description: 'Center Seal Pouches, 4 Sides Seal Pouches and Gusseted pouches.',
-      descriptionAr: 'أكياس الختم المركزي، أكياس الختم ذات 4 جوانب والأكياس المطوية.'
-    },
-    {
-      icon: 'https://raptor.gamezawy.com/ipp/wp-content/uploads/2025/06/printer-80x80.png',
-      title: 'Printing',
-      titleAr: 'الطباعة',
-      description: 'Rotogravure up to 10 colors, Reverse printing up to 2 colors Reverse matt varnishing Cild seal.',
-      descriptionAr: 'الطباعة الحفرية حتى 10 ألوان، الطباعة العكسية حتى لونين، التلميع المطفي العكسي، الختم البارد.'
-    },
-    {
-      icon: 'https://raptor.gamezawy.com/ipp/wp-content/uploads/2025/06/camera-roll-80x80.png',
-      title: 'PVC Shrik sleeves',
-      titleAr: 'أكمام PVC المنكمشة',
-      description: ''
-    },
-    {
-      icon: 'https://raptor.gamezawy.com/ipp/wp-content/uploads/2025/06/plastic-wrap-1-80x80.png',
-      title: 'Stretch Film',
-      titleAr: 'فيلم التمدد',
-      description: 'Automatic and manual for wrapping products and balettes.',
-      descriptionAr: 'أوتوماتيكي ويدوي لتغليف المنتجات والمنصات.'
-    },
-    {
-      icon: 'https://raptor.gamezawy.com/ipp/wp-content/uploads/2025/06/tubes-80x80.png',
-      title: 'PE Extrusion',
-      titleAr: 'بثق البولي إيثيلين',
-      description: 'Laminate/coat films, paper, alufoil, with PE film 10:50 microns.',
-      descriptionAr: 'تصفيح/طلاء الأفلام، الورق، رقائق الألومنيوم، بفيلم البولي إيثيلين 10:50 ميكرون.'
-    }
-  ];
+  const isRTL = i18n.language === "ar";
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -87,9 +23,9 @@ const Services: React.FC = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   return (
@@ -104,7 +40,7 @@ const Services: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 relative inline-block">
-            {t('services.title')}
+            {t("services.title")}
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary-600 rounded-full"></div>
           </h2>
         </motion.div>
@@ -125,8 +61,8 @@ const Services: React.FC = () => {
             >
               {/* Icon */}
               <div className="w-20 h-20 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-100 transition-colors">
-                <img 
-                  src={service.icon} 
+                <img
+                  src={service.icon}
                   alt={isRTL ? service.titleAr : service.title}
                   className="w-12 h-12 object-contain"
                 />
