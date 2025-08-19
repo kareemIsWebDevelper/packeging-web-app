@@ -29,10 +29,10 @@ export const images = {
 
   // Company certificates (PDFs)
   certificates: {
-    fssc22000: '/assets/docs/fssc22000.pdf',
-    iso14001: '/assets/docs/iso14001.pdf',
-    iso45001: '/assets/docs/iso45001.pdf',
-    iso9001: '/assets/docs/iso9001.pdf',
+    iso14001: '/assets/images/certificates/iso14001_page-0001.jpg',
+    iso9001: '/assets/images/certificates/iso9001_page-0001.jpg',
+    iso45001: '/assets/images/certificates/iso45001_page-0001.jpg',
+    fssc22000: '/assets/images/certificates/fssc22000_page-0001.jpg',
   },
 
   // Success Partners logos
