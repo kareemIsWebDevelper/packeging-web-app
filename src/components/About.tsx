@@ -62,7 +62,7 @@ const About: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        {/* Calibo Section */}
+        {/* calippo Section */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -70,7 +70,7 @@ const About: React.FC = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="grid lg:grid-cols-2 gap-12 items-center mt-20"
         >
-          {/* Calibo Images */}
+          {/* calippo Images */}
           <motion.div variants={itemVariants} className="order-2 lg:order-1">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {Object.entries(images.calippo).map(([key, src], index) => (
@@ -91,7 +91,7 @@ const About: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Calibo Content */}
+          {/* calippo Content */}
           <motion.div variants={itemVariants} className="order-1 lg:order-2 space-y-6">
             <div>
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

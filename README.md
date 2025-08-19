@@ -119,7 +119,7 @@ The app uses Tailwind CSS for styling. You can:
 
 ### About
 - Company introduction
-- Calibo production line showcase
+- calippo production line showcase
 - Video placeholder
 - Image gallery
 
